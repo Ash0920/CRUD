@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="">
+</head>
+<style>
+   * {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Student Details Container */
+.student-details-container {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Space between student-details and container-2 */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    margin: 0;
+}
+
+.add-student-btn {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+button {
+    padding: 6px 10px;
+    margin: 0 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.view-btn {
+    background-color: #0cddd2;
+}
+
+.edit-btn {
+    background-color: #066916;
+}
+
+.delete-btn {
+    background-color: #cc0a1d;
+}
+
+/* Container-2 below Student Details Container */
+.container-2 {
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Student Add Form */
+.student-add-form-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.student-add-form-container h3 {
+    margin-top: 0;
+}
+
+label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.save-student-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+</style>
+<body>
+
+<div class="main-container">
+    <!-- Student Details Container -->
+    <div class="student-details-container">
+        <div class="header">
+            <h2>Student Details</h2>
+            <button class="add-student-btn">Add Students</button>
+        </div>
+    </div>  
+    <div class="container-2">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Student Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Course</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Example Rows; replace with dynamic data in CodeIgniter -->
+                <tr>
+                    <td>1</td>
+                    <td>Satyam</td>
+                    <td>satyam@gmail.com</td>
+                    <td>8888888888</td>
+                    <td>BCA</td>
+                    <td>
+                        <button class="view-btn">View</button>
+                        <button class="edit-btn">Edit</button>
+                        <button class="delete-btn">Delete</button>
+                    </td>
+                </tr>
+                <!-- Add more rows dynamically as needed -->
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+    <!-- Student Add Form Container -->
+    <div class="student-add-form-container">
+        <h3>Add Student</h3>
+        <form action="" method="post">
+            <label for="studentName">Student Name</label>
+            <input type="text" id="studentName" name="student_name" required>
+
+            <label for="studentEmail">Student Email</label>
+            <input type="email" id="studentEmail" name="student_email" required>
+
+            <label for="studentPhone">Student Phone</label>
+            <input type="text" id="studentPhone" name="student_phone" required>
+
+            <label for="studentCourse">Student Course</label>
+            <input type="text" id="studentCourse" name="student_course" required>
+
+            <button type="submit" class="save-student-btn">Save Student</button>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>
